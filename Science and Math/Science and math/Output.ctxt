@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=i
+comment0.target=void\ print(java.lang.String)
+comment1.params=i
+comment1.target=void\ println(java.lang.String)
+comment2.params=n
+comment2.target=void\ print(double)
+comment3.params=n
+comment3.target=void\ println(double)
+numComments=4

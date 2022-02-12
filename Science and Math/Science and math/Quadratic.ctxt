@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Quadratic
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Quadratic\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=a\ b\ c
+comment1.target=double\ r1(double,\ double,\ double)
+comment2.params=a\ b\ c
+comment2.target=double\ r2(double,\ double,\ double)
+comment3.params=a\ b\ c
+comment3.target=double\ d(double,\ double,\ double)
+comment4.params=a\ b\ c\ b1
+comment4.target=void\ d(double,\ double,\ double,\ boolean)
+comment5.params=
+comment5.target=void\ quad()
+numComments=6

@@ -1,0 +1,300 @@
+import toolkit.*;
+import java.util.Scanner;
+/**
+ * Write a description of class Code here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Code
+{
+    private static String num;
+    private static String dou;
+    private static String str;
+    private static String boo;
+    private static String ch;
+    private static String var;
+    private static long k;
+    private static long c;
+    private static Output op=new Output();
+    private static Input in=new Input();
+    private static Scanner sc=new Scanner(System.in);
+    private static String code;
+    private static String P;
+    public static void input()
+    {
+        k=10;
+        op.println("\f Enter your program:");
+        c=0;
+        do
+        {  
+            P =sc.nextLine();
+            code =code +P+'\n';
+            k=k+10;
+            c++;
+            if(P.startsWith("init"))
+            {
+                init();
+            }
+            else if(P.startsWith("for"))
+            {
+                op.println("Enter initialisation constant");
+                double i=in.num();
+                op.println("Enter condition");
+                String condition=sc.nextLine();
+                op.println("Enter iteration by ap or gp");
+                String opt=sc.nextLine();
+                double inc=0;
+                if(op.equals(1)||op.equals(2))
+                {
+                    op.println("Enter increment constant");
+                    inc=in.num();
+                }
+
+            }
+            else if(P.startsWith("while"))
+            {
+            }
+            else if(P.startsWith("do"))
+            {
+            }
+            else if(P.startsWith("if"))
+            {
+            }
+            else if(P.startsWith("print"))
+            {
+            }
+            if(code.endsWith("Run"+'\n'))
+                break;
+        }while(true);
+    }
+
+    public static void algorithm()
+    {
+    }
+
+    public static void loop()
+    {
+
+    }
+
+    public static void datatype()
+    {
+        String s="";
+        int c=0;
+        for(int i=0;i<num.length();i++)
+        {
+            if(num.charAt(i)==' ')
+            {
+                try
+                {
+                    int n=Integer.parseInt(s);
+                    c++;
+                }
+                catch(Exception e)
+                {
+                }
+            }
+            else
+            {
+                str=str+num.charAt(i);
+            }
+        }
+        int nu[]=new int[c];
+        c=0;
+        for(int i=0;i<nu.length;i++)
+        {
+            try
+            {
+                nu[c]=Integer.parseInt(s);
+                op.println(nu[c]);
+                c++;
+            }
+            catch(Exception e)
+            {
+            }
+        }
+        s="";
+        c=0;
+        for(int i=0;i<num.length();i++)
+        {
+            if(num.charAt(i)==' ')
+            {
+                try
+                {
+                    int n=Integer.parseInt(s);
+                    c++;
+                }
+                catch(Exception e)
+                {
+                }
+            }
+            else
+            {
+                str=str+num.charAt(i);
+            }
+        }
+        Double du[]=new Double[c];
+        c=0;
+        for(int i=0;i<nu.length;i++)
+        {
+            try
+            {
+                du[c]=Double.parseDouble(s);
+                op.println(du[c]);
+                c++;
+            }
+            catch(Exception e)
+            {
+            }
+        } 
+    }
+
+    public static void run()
+    {
+        input();
+        datatype();
+    }
+
+    public static void init()
+    {
+        code =code +P+'\n';
+        k=k+10;
+        c++;
+        op.println("Enter the datatype");
+        P=sc.nextLine();
+        if(P.equals("String"))
+        {
+            P=sc.nextLine();
+            if(P.equals("Input"))
+            {
+                code =code +P+'\n';
+                k=k+10;
+                c++;
+            }
+            else if(P.startsWith("\"")&&P.endsWith("\""))
+            {
+                str=str+P+" ";
+                code =code +P+'\n';
+                k=k+10;
+                c++;
+            }
+            else
+            {
+                op.println("Invalid String");
+            }
+        }
+        else if(P.equals("int"))
+        {
+            P=sc.nextLine();
+            if(P.equals("Input"))
+            {
+                code =code +P+'\n';
+                k=k+10;
+                c++;
+            }
+            else
+            {
+                int t=0;int n=0;
+                try
+                {
+                    n=Integer.parseInt(P);
+                }
+                catch(Exception e)
+                {
+                    System.out.println("Invalid number\nEnter Again");
+                    t=1;
+                }
+                if(t==0)
+                {
+                    num=num+n+" ";
+                    code =code +n+'\n';
+                    k=k+10;
+                    c++;
+                }
+            }
+        }
+        else if(P.equals("double"))
+        {
+            P=sc.nextLine();
+            if(P.equals("Input"))
+            {
+                code =code +P+'\n';
+                k=k+10;
+                c++;
+            }
+            else
+            {
+                int t=0; double n=0;
+                try
+                {
+                    n=Double.parseDouble(P);
+                }
+                catch(Exception e)
+                {
+                    System.out.println("Invalid number\nEnter Again");
+                    t=1;
+                }
+                if(t==0)
+                {
+                    dou=dou+n+" ";
+                    code =code +P+'\n';
+                    k=k+10;
+                    c++;
+                }
+            }
+        }
+        else if(P.equals("char"))
+        {
+            P=sc.nextLine();
+            if(P.equals("Input"))
+            {
+                code =code +P+'\n';
+                k=k+10;
+                c++;
+            }
+            else if(P.length()==1)
+            {
+                int t=0;
+                ch=ch+P+" ";
+                code =code +P+'\n';
+                k=k+10;
+                c++;
+            }
+        }
+        else if(P.equals("boolean"))
+        {
+            P=sc.nextLine();
+            if(P.equals("Input"))
+            {
+                code =code +P+'\n';
+                k=k+10;
+                c++;
+            }
+            else
+            {
+                int t=0;
+                if(P.equals("true")||P.equals("false"))
+                {
+                    boo=boo+"P"+" ";
+                    code =code +P+'\n';
+                    k=k+10;
+                    c++;
+                }
+            }
+        }
+        else 
+        {
+            op.println("Invalid data type");
+        }
+    }
+
+    static void display(String x)
+    {
+        if(x.startsWith("print"))
+        {
+            System.out.println(x.substring(x.indexOf("\"")+1,x.lastIndexOf("\"")));   
+        }
+    }
+
+}

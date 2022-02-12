@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=SciCalc()
+comment1.params=exp
+comment1.target=java.lang.String\ calc(java.lang.String)
+comment2.params=
+comment2.target=void\ rules()
+comment3.params=exp
+comment3.target=java.lang.String\ changing(java.lang.String)
+comment4.params=
+comment4.target=void\ cal()
+numComments=5
